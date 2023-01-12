@@ -6,7 +6,7 @@
               android:layout_height="match_parent"
               android:orientation="vertical"
               android:gravity="center"
-              tools:context=".Register">
+              tools:context=".activity_register">
 
     <TextView
             android:layout_width="match_parent"
@@ -16,7 +16,7 @@
             android:textColor="#CC000000"
             android:fontFamily="sans-serif-condensed"
             android:textSize="18sp"
-            android:text="Register Here"/>
+            android:text="@string/register_here"/>
 
     <EditText
             android:importantForAutofill="no"
@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:inputType="text"
             android:id="@+id/fullname"
-            android:hint="Full Name"
+            android:hint="Fullname"
             android:maxLines="1"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:inputType="phone"
             android:id="@+id/phone"
-            android:hint="Mobile"
+            android:hint="@string/mobile"
             android:maxLines="1"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
@@ -51,7 +51,7 @@
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
             android:id="@+id/email"
-            android:hint="Email"
+            android:hint="@string/email"
             android:maxLines="1"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
@@ -107,7 +107,7 @@
                 android:id="@+id/loginNow"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Login Now"
+                android:text="Login now"
                 android:textStyle="bold"/>
     </LinearLayout>
 

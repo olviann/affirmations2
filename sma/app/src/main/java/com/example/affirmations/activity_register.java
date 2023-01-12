@@ -16,7 +16,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class Register extends AppCompatActivity {
+public class activity_register extends AppCompatActivity {
 
     // create object of DatabaseReference class to access firebase's Realtime Database
     DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://loginregister-19a03-default-rtdb.firebaseio.com/");
@@ -46,13 +46,13 @@ public class Register extends AppCompatActivity {
 
             // check if user fill all the fields before sending data to firebase
             if(fullnameTxt.isEmpty() || emailTxt.isEmpty() || phoneTxt.isEmpty() || passwordTxt.isEmpty()){
-                Toast.makeText(Register.this, "Please fill all fields", Toast.LENGTH_SHORT).show();
+                Toast.makeText(activity_register.this, "Please fill all fields", Toast.LENGTH_SHORT).show();
             }
 
             // check if passwords are matching with each other
             //  if not matching with each other then show a toast messsage
             else if(!passwordTxt.equals(conPasswordTxt)){
-                Toast.makeText(Register.this, "Passwords are not matching", Toast.LENGTH_SHORT).show();
+                Toast.makeText(activity_register.this, "Passwords are not matching", Toast.LENGTH_SHORT).show();
             }
 
             else{
@@ -63,7 +63,7 @@ public class Register extends AppCompatActivity {
 
                         // check if phone is not registered before
                         if(snapshot.hasChild(phoneTxt)){
-                            Toast.makeText(Register.this, "Phone is already registered", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(activity_register.this, "Phone is already registered", Toast.LENGTH_SHORT).show();
                         }
                         else{
 
@@ -75,7 +75,7 @@ public class Register extends AppCompatActivity {
                             databaseReference.child("users").child(phoneTxt).child("password").setValue(passwordTxt);
 
                             // show a success message then finish the activity
-                            Toast.makeText(Register.this, "User registered successfully.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(activity_register.this, "User registered successfully.", Toast.LENGTH_SHORT).show();
                             finish();
                         }
                     }
