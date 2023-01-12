@@ -16,7 +16,7 @@
             android:textColor="#CC000000"
             android:fontFamily="sans-serif-condensed"
             android:textSize="18sp"
-            android:text="Login Here"/>
+            android:text="@string/login_here"/>
 
     <EditText
             android:importantForAutofill="no"
@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:inputType="phone"
             android:id="@+id/phone"
-            android:hint="Mobile"
+            android:hint="@string/mobile"
             android:maxLines="1"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:inputType="text"
             android:id="@+id/password"
-            android:hint="Password"
+            android:hint="@string/password"
             android:maxLines="1"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
@@ -51,7 +51,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
-            android:text="Login"
+            android:text="@string/login"
             android:layout_marginTop="40dp"/>
 
     <LinearLayout
@@ -64,13 +64,13 @@
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Don't have an account?"/>
+                android:text="@string/no_account"/>
         <TextView
                 android:layout_marginStart="5dp"
                 android:id="@+id/registerNowBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Register Now"
+                android:text="@string/register_now"
                 android:textStyle="bold"/>
     </LinearLayout>
 
